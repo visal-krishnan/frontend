@@ -1,0 +1,45 @@
+.navbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fdfbf5;
+    border-bottom: none;
+    margin-top: 20px;
+  }
+  
+  .navbar .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar .logo img {
+    width: 50px;
+    margin: 10px;
+    border-radius: 60%; 
+    object-fit: cover; 
+  }
+  
+  .navbar .logo h1 {
+    font-size: 24px;
+    color: #fdfbf5;
+    margin: 0;
+  }
+  
+  .navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .navbar li {
+    margin: 20px;
+    font-size: 20px;
+    cursor: pointer;
+    color:  #dda15e;
+  }
+  

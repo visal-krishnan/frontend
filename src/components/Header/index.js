@@ -1,5 +1,6 @@
 import React from 'react';
 import './index.css';
+import IncidentReportForm from '../IncidentReportForm';
 
 const Header = () => {
   return (

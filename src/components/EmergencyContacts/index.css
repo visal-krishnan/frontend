@@ -1,0 +1,55 @@
+.container-app {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  height: 100vh;
+  width: 100%;
+  
+}
+.right-main-sec{
+  width: 83%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 17%;
+  padding-left: 30px;
+
+}
+.emergency-contacts {
+    margin: 20px;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .emergency-contacts h2 {
+    margin-bottom: 20px;
+  }
+  
+  .contacts-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .contacts-table th,
+  .contacts-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .contacts-table th {
+    background-color: #f2f2f2;
+  }
+  
+  .contacts-table a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .contacts-table a:hover {
+    text-decoration: underline;
+  }
+  

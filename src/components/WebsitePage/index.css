@@ -1,12 +1,11 @@
 .web-container{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content:flex-start;
     align-items: center;
     /* height: auto;
     width: auto; */
     background-size: cover;
     overflow-x: hidden;
-    background-color: #fdfbf5;  
-    background: linear-gradient(to right,  #dda15e 50%,  #fdfbf5 50%); 
+    background-image: linear-gradient(to right,  #dda15e 50%,  #fdfbf5 50%); 
 }

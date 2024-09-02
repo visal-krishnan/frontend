@@ -5,7 +5,7 @@
     justify-content: space-between;
     background-color: #fdfbf5;
     border-bottom: none;
-    margin-top: 20px;
+    margin-top: 40px;
   }
   
   .navbar .logo {
@@ -14,10 +14,12 @@
   }
   
   .navbar .logo img {
-    width: 50px;
+    width: 100px;
+    height: 50px;
     margin: 10px;
     border-radius: 60%; 
     object-fit: cover; 
+    margin-top: 25px;
   }
   
   .navbar .logo h1 {
@@ -42,4 +44,11 @@
     cursor: pointer;
     color:  #dda15e;
   }
+.navbar-link{
+  margin: 20px;
+    font-size: 20px;
+    cursor: pointer;
+    color:  #dda15e;
+    text-decoration: none;
+}
   

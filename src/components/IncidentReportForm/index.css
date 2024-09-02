@@ -63,6 +63,19 @@
   .radio-group {
     display: flex;
     gap: 10px;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+  .radio-group label{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 10px;
+    color: #333;
+  }
+  .radio-group input{
+    margin-right: 15px;
+    color: #666;
   }
   
   .submit-button {

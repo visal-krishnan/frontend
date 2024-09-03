@@ -5,7 +5,8 @@ import "./index.css";
 const LoginForm = () => {
     return (
         <div className="login-container">
-            <img src="https://res.cloudinary.com/dghlihlgi/image/upload/v1725085366/Preview_3_u4ch2z.png" alt="logo-here" className="logo-image"/>
+            <h1 className="logo-image">RAPID RESOLVE</h1>
+            {/* <img src="https://res.cloudinary.com/dghlihlgi/image/upload/v1725085366/Preview_3_u4ch2z.png" alt="logo-here" className="logo-image"/> */}
             <div className="image-con">
                 <img src="https://res.cloudinary.com/dghlihlgi/image/upload/v1725083306/Saly-3_ehkamc.jpg"
                 alt="Driverboy "className="image1"/>

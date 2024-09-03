@@ -2,10 +2,15 @@
     width: 100%;
     height: auto;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
-    margin-bottom: 20px;
+   
+    background-color:#7540ee; 
+background-image: radial-gradient(#166efb,#344351);
+    object-fit: fill;
+    z-index: 99999;
+    border: 1px solid #1666fb80;
 }
 .header-container {
     width:50%;
@@ -16,13 +21,14 @@
     align-items: center;
     justify-content: center;
     color: white;
-    background-size: cover; 
+    background-size: cover;
   }
   
   .header-container p {
     font-size: 20px;
     padding: 10px;
     margin-bottom: 20px;
+    color: white;
   }
  
   .volunteer-btn {

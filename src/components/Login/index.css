@@ -7,7 +7,7 @@
     height: 100vh;
     width: 100%;
     border-radius: 8px;
-    background-image: linear-gradient(to right, #dda15e 50%, #fdfbf5 50%);
+    background-image: linear-gradient(to right, #1457C3 50%, #ffffff 50%);
     position: relative;
 }
 
@@ -63,7 +63,7 @@ h2 {
 }
 
 .btn-login {
-    background-color: #dda15e;
+    background-color: #06C;
     color: white;
     padding: 10px;
     border: none;
@@ -86,8 +86,10 @@ h2 {
     position: absolute;
     left: 20px;
     top: 20px;
-    width: 100px;
-    height: 50px;
+    /* width: 100px;
+    height: 50px; */
+    font-size: 20px;
+    color: white;
     /* border-radius: 90%; */
     /* height: 90px;
     width: 90px; */

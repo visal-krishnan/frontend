@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Righteous&family=Risque&display=swap");
 .contactSection {
-  background-color:#fdfbf5;
+  background-color:whitesmoke;
   display: flex;
   flex-direction: column;
-  color: #dda15e;
+  color: var(--dark-slate-blue);
   font-weight: 400;
   justify-content: flex-start;
   align-items: center;
@@ -58,9 +58,8 @@ object-fit: cover;
   width: 256px;
   max-width: 100%;
   gap: 20px;
-  color:#fdfbf5;
+  color:black;
   white-space: nowrap;
-  background-color:  #dda15e;
   padding: 30px;
 
   justify-content: space-between;
@@ -177,6 +176,6 @@ object-fit: cover;
 .link {
   text-decoration: none;
   font-size: 18px;
-  color: #dda15e;
+  color: var(--dark-slate-blue);
   font-style: normal;
 }

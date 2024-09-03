@@ -7,7 +7,8 @@ const Sidebar = () => {
   return (
     <div className="sidebar">
       <div>
-        <img src="https://res.cloudinary.com/dghlihlgi/image/upload/v1725085366/Preview_3_u4ch2z.png" alt="Logo" />
+        <h1 className="logo-h1">Rapid Resolve</h1>
+        {/* <img src="https://res.cloudinary.com/dghlihlgi/image/upload/v1725085366/Preview_3_u4ch2z.png" alt="Logo" /> */}
       </div>
       <ul className="menu">
         <li>
@@ -31,6 +32,7 @@ const Sidebar = () => {
           </Link>
         </li> */}
       </ul>
+    <button className="logout-button">Logout</button>
     </div>
   );
 };

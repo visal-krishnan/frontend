@@ -3,29 +3,34 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #fdfbf5;
+    background-color:  white;
     border-bottom: none;
-    margin-top: 40px;
+   height: 20%;
+   padding: 20px;
+   
+  
   }
   
   .navbar .logo {
     display: flex;
     align-items: center;
   }
+
   
   .navbar .logo img {
     width: 100px;
     height: 50px;
+    border-radius: 60%;
     margin: 10px;
-    border-radius: 60%; 
     object-fit: cover; 
-    margin-top: 25px;
   }
   
   .navbar .logo h1 {
     font-size: 24px;
-    color: #fdfbf5;
-    margin: 0;
+    color: #166efb;
+    margin-left:20px;
+    font-weight: bold;
+    font-family: "Risque", serif;
   }
   
   .navbar ul {
@@ -40,15 +45,16 @@
   
   .navbar li {
     margin: 20px;
-    font-size: 20px;
     cursor: pointer;
-    color:  #dda15e;
+    
+   
   }
 .navbar-link{
-  margin: 20px;
-    font-size: 20px;
+  margin: 10px;
     cursor: pointer;
-    color:  #dda15e;
+    color: var(--dark-slate-blue);
+    font-family: Roboto;
+    font-size: 25px;
+    line-height: 22px;
     text-decoration: none;
 }
-  

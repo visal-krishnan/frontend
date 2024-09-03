@@ -1,4 +1,8 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import Cookies from 'js-cookie';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import './index.css';
 
 const RegisterVolunteer = () => {
@@ -6,7 +10,8 @@ const RegisterVolunteer = () => {
   const [selectedCity, setSelectedCity] = useState("");
   const [cities, setCities] = useState([]);
 
-  // Example data for states and cities
+  const navigate = useNavigate();
+
   const states = [
     { name: "Maharashtra", cities: ["Mumbai", "Pune", "Nagpur", "Nashik"] },
     { name: "Karnataka", cities: ["Bengaluru", "Mysuru", "Mangaluru", "Hubli"] },
@@ -19,11 +24,11 @@ const RegisterVolunteer = () => {
     { name: "Telangana", cities: ["Hyderabad", "Warangal", "Nizamabad", "Karimnagar"] },
     { name: "Kerala", cities: ["Thiruvananthapuram", "Kochi", "Kozhikode", "Kollam"] }
   ];
+
   const handleStateChange = (e) => {
     const selectedState = e.target.value;
     setSelectedState(selectedState);
 
-    // Find cities for the selected state
     const state = states.find(state => state.name === selectedState);
     setCities(state ? state.cities : []);
     setSelectedCity(""); // Reset city selection when state changes
@@ -33,15 +38,28 @@ const RegisterVolunteer = () => {
     setSelectedCity(e.target.value);
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    toast.success('Registration successful!', {
+      position: 'top-right',
+    });
+
+    navigate('/login');
+  };
+
   return (
     <div className="register-container">
-      <img src="https://res.cloudinary.com/dghlihlgi/image/upload/v1725085366/Preview_3_u4ch2z.png" alt="logo-here" className="logo-image"/>
+      {/* <div className="logo">
+        <h1>Rapid Resolve</h1>
+        <img src="https://res.cloudinary.com/dghlihlgi/image/upload/v1725002683/Repidlogo_tibxzw.jpg" alt="Rapid Resolve Logo" className='logo-image'/>
+      </div> */}
       <div className="form-container">
         <h1>Register As Volunteer</h1>
-        <p>We have wish to help you can register here</p>
-        <form>
+        <p>We wish to help; you can register here</p>
+        <form onSubmit={handleSubmit}>
           <input type="text" placeholder="Contact name" required />
-          <input type="text" placeholder="address"/>
+          <input type="text" placeholder="Address" />
           <div className="form-group">
             <label htmlFor="state">State</label>
             <select name="state" value={selectedState} onChange={handleStateChange} required>
@@ -79,7 +97,17 @@ const RegisterVolunteer = () => {
           <button type="submit">SUBMIT</button>
         </form>
       </div>
-      
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar
+        newestOnTop
+        closeButton={false}
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
     </div>
   );
 }

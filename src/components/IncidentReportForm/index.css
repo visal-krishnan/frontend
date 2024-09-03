@@ -8,11 +8,13 @@
 
 .incident-report-container {
     display: flex;
+    
     width: 100%;
     max-width: 1200px;
     padding: 20px;
-    background-color: #fff;
+    background-color: whitesmoke;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+
   }
   
   .form-section {
@@ -23,10 +25,12 @@
   .map-section {
     flex: 1;
     padding: 20px;
-    background-color: #f7d9a9;
+    /* background-color: #81b1fa; */
     display: flex;
     justify-content: center;
-    align-items: center;
+  align-items: center;
+  width: 100%;
+
   }
   
   h2 {
@@ -62,11 +66,20 @@
   
   .radio-group {
     display: flex;
-    gap: 10px;
+    gap: 14px;
   }
-  
+  .radio-group label{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 10px;
+   color: #666;
+  }
+  .radio-group input{
+    margin-right: 15px;
+  }
   .submit-button {
-    background-color: #dda15e;
+    background-color: #06c;
     color: white;
     padding: 10px;
     border: none;
@@ -75,8 +88,37 @@
     font-size: 16px;
     width: 100%;
   }
-  
-  .submit-button:hover {
-    background-color: #c47f36;
-  }
-  
+/* index.css */
+
+.toastify-container {
+  font-family: Arial, sans-serif !important;
+}
+
+.toastify-toast {
+  background-color: #333 !important; /* Dark background for the toast */
+  color: #fff !important; /* White text */
+  border-radius: 8px !important;
+  padding: 16px !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important;
+}
+
+
+.toastify-toast-success {
+  background-color: #4CAF50; /* Green background for success */
+}
+
+.toastify-toast-error {
+  background-color: #F44336; /* Red background for error */
+}
+
+.toastify-toast-info {
+  background-color: #2196F3; /* Blue background for info */
+}
+
+.toastify-toast-warning {
+  background-color: red; /* Orange background for warning */
+}
+
+.toastify-toast .toastify-close-button {
+  color: #fff; /* White close button */
+}

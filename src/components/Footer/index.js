@@ -1,26 +1,35 @@
 import React, { Component } from "react";
+import { FaInstagram, FaTwitter, FaFacebook, FaWhatsapp } from "react-icons/fa"; // Importing icons from react-icons
 import "./index.css";
 
+// Array of icons and their respective links
 const socialIcons = [
   {
-    src: "https://cdn.builder.io/api/v1/image/assets/TEMP/10e59c07e7b33df4a6f981d27ab77a2d960eb5ce45c204e441c22c596d5355c6?placeholderIfAbsent=true&apiKey=c0675f285b7e411a80445cebc7c0b8d3",
+    component: <FaInstagram color="#E4405F" size={24} />, // Instagram icon with original color
     alt: "Instagram icon",
+    link: "https://www.instagram.com", // Link to Instagram
   },
   {
-    src: "https://cdn.builder.io/api/v1/image/assets/TEMP/d5590da34d87462254eead044c379896ced1ce5b46685b52dbf97652a01a9706?placeholderIfAbsent=true&apiKey=c0675f285b7e411a80445cebc7c0b8d3",
-    alt: "Social media icon",
+    component: <FaTwitter color="#1DA1F2" size={24} />, // Twitter icon with original color
+    alt: "Twitter icon",
+    link: "https://www.twitter.com", // Link to Twitter
   },
   {
-    src: "https://cdn.builder.io/api/v1/image/assets/TEMP/9e15ed8ecaca9cb459ec88c67dbcbe895c653f83242d93ea5c3904f2497928c3?placeholderIfAbsent=true&apiKey=c0675f285b7e411a80445cebc7c0b8d3",
-    alt: "Social media icon",
+    component: <FaFacebook color="#1877F2" size={24} />, // Facebook icon with original color
+    alt: "Facebook icon",
+    link: "https://www.facebook.com", // Link to Facebook
   },
   {
-    src: "https://res.cloudinary.com/digbzwlfx/image/upload/v1724847481/Frame_10_o8vdg9.png",
-    alt: "Instagram icon",
+    component: <FaWhatsapp color="#25D366" size={24} />, // WhatsApp icon with original color
+    alt: "WhatsApp icon",
+    link: "https://www.whatsapp.com", // Link to WhatsApp
   },
 ];
-const SocialIcon = ({ src, alt }) => (
-  <img loading="lazy" src={src} alt={alt} className="socialIcon" />
+
+const SocialIcon = ({ component, alt, link }) => (
+  <a href={link} target="_blank" rel="noopener noreferrer" className="social-icon">
+    {component}
+  </a>
 );
 
 class Footer extends Component {
@@ -28,12 +37,14 @@ class Footer extends Component {
     return (
       <section className="contactSection">
         <div className="contentWrapper">
-          <img
+          <h1>Rapid Resolve</h1>
+          {/* <img
             loading="lazy"
             src="https://res.cloudinary.com/dghlihlgi/image/upload/v1725002683/Repidlogo_tibxzw.jpg"
             alt="Company logo"
             className="footer-logo"
-          />
+          /> */}
+
           <h1 className="mainHeading">Together in action, Ready in Crisis</h1>
           <h2 className="subHeading">Contact us on</h2>
           <div className="socialIcons">
@@ -51,7 +62,7 @@ class Footer extends Component {
               className="emailIcon"
             />
             <address className="emailAddress">
-              <a href="mailto:CommUnityMail@mail.com" className="link">
+              <a href="mailto:rapidresolve7@mail.com" className="link">
                 rapidresolve7@mail.com
               </a>
             </address>

@@ -11,6 +11,7 @@ import IncidentReportForm from "./components/IncidentReportForm";
 import RegisterVolunteer from "./components/RegisterVolunteer";
 import AboutUs from "./components/AboutUs";
 import ContactUs from "./components/ContactUs";
+import SignUp from "./components/SignUp";
 
 
 function App() {
@@ -26,10 +27,11 @@ function App() {
           <Route path="/dashboard" element={<Dashboard/>} />
           <Route path="/incidents" element={<Incidents/>} />
           <Route path="/report" element={<IncidentReportForm/>} />
-          <Route path="/volunter-register" element={<RegisterVolunteer/>} />
+          <Route path="/volunter-register" element={<SignUp/>} />
           <Route path="/emergency-contacts" element={<EmergencyContacts/>} />
           <Route path="/about" element={<AboutUs/>} />
           <Route path="/contact" element={<ContactUs/>} />
+          <Route path="/fill-profile" element={<RegisterVolunteer/>}/>
           {/* <Route path="/notifications" component={Notifications} /> */}
           </Routes>
       {/* </div> */}

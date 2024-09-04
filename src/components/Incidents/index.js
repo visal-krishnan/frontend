@@ -1,66 +1,3 @@
-// import React from "react";
-// import Sidebar from "../Sidebar";
-// import IncidentCard from "../IncidentCard";
-// import './index.css'
-
-// const dummy = [
-//     {
-//         name: "Rajesh Kumar",
-//         phoneNo: "9876543210",
-//         typeOfIncident: "Fire",
-//         location: "Sector 17, Chandigarh",
-     
-//     },
-//     {
-//         name: "Anita Sharma",
-//         phoneNo: "8765432109",
-//         typeOfIncident: "Flood",
-//         location: "MG Road, Mumbai",
-       
-//     },
-//     {
-//         name: "Karan Patel",
-//         phoneNo: "7654321098",
-//         typeOfIncident: "Accident",
-//         location: "Ring Road, Delhi",
-//         severity: "Low",
-//     },
-//     {
-//         name: "Sunita Devi",
-//         phoneNo: "6543210987",
-//         typeOfIncident: "Earthquake",
-//         location: "Park Street, Kolkata",
-//         severity: "Critical",
-//     },
-//     {
-//         name: "Vijay Singh",
-//         phoneNo: "5432109876",
-//         typeOfIncident: "Fire",
-//         location: "Civil Lines, Jaipur",
-//         severity: "High",
-//     },
-// ];
-
-
-// const Incidents=()=>{
-//     return(
-
-//        <div className="container-app">
-//         <Sidebar/>
-      
-//             <div className="cards-sec">
-//                 {dummy.map(each=><IncidentCard each={each}/>)}
-
-//             </div>
-
-   
-
-//        </div>
-//     )
-// }
-// export default Incidents;
-
-
 import React, { useState, useEffect } from "react";
 import Sidebar from "../Sidebar";
 import IncidentCard from "../IncidentCard";
@@ -90,14 +27,13 @@ const Incidents = () => {
   useEffect(() => {
     const fetchIncidents = async () => {
       try {
-        const response = await fetch("http://localhost:8001/api/incident/reports");
+        const response = await fetch("http://localhost:9999/api/incident/reports");
         if (!response.ok) {
           throw new Error("Network response was not ok");
         }
         const data = await response.json();
         setIncidents(data);
-        // Initially, filter incidents to include all
-        setFilteredIncidents(data);
+        setFilteredIncidents(data); // Initially, filter incidents to include all
       } catch (error) {
         console.error("Error fetching incidents:", error);
       }
@@ -110,18 +46,19 @@ const Incidents = () => {
     const selectedState = stateOptions.find(option => option.name === state);
     setCities(selectedState ? selectedState.cities : ["All"]);
     setCity("All"); // Reset city when state changes
+  }, [state]);
 
-    // Filter incidents based on selected state and city
-    filterIncidents(state, city);
+  useEffect(() => {
+    const filterIncidents = () => {
+      const filtered = incidents.filter(incident => 
+        (state === "All" || incident.state === state) && 
+        (city === "All" || incident.city === city)
+      );
+      setFilteredIncidents(filtered);
+    };
+
+    filterIncidents();
   }, [state, city, incidents]);
-
-  const filterIncidents = (state, city) => {
-    const filtered = incidents.filter(incident => 
-      (state === "All" || incident.state === state) && 
-      (city === "All" || incident.city === city)
-    );
-    setFilteredIncidents(filtered);
-  };
 
   const handleStateChange = (e) => {
     const newState = e.target.value;

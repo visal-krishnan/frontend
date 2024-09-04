@@ -61,6 +61,7 @@ const LoginForm = () => {
         if (volunteerResponse.ok) {
           const data1 = await volunteerResponse.json();
           setResult(data1);
+          localStorage.setItem("data",JSON.stringify(data1));
           navigate("/dashboard");
         } else if (volunteerResponse.status === 404) {
           if (userRole === "VOLUNTEER") {

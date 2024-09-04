@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Sidebar from "../Sidebar";
 import IncidentCard from "../IncidentCard";
 import './index.css';
+import TopNavbar from "../TopNavbar";
 
 const stateOptions = [
   { name: "All", cities: ["All"] },
@@ -74,6 +75,7 @@ const Incidents = () => {
     <div className="container-app">
       <Sidebar />
       <div className="view-incident-con">
+        <TopNavbar />
         <div className="filter-section">
           <div className="filter-group">
             <label htmlFor="state">State:</label>

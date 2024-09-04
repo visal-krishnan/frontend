@@ -309,13 +309,21 @@ const IncidentReportForm = () => {
     setLatitude(lat);
     setLongitude(lng);
   };
-
+  const saveMarker = (lat, lng) => {
+    const currentMarkers = JSON.parse(localStorage.getItem('markers')) || [];
+    currentMarkers.push({ lat, lng });
+    localStorage.setItem('markers', JSON.stringify(currentMarkers));
+  };
   // const handleFileChange = (e) => {
   //   setPhotoPath(e.target.files[0]);
   // };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (latitude && longitude) {
+      saveMarker(latitude, longitude);
+    }
+    console.log('Form submitted with values:', { latitude, longitude });
 
     const requestData = {
       contactName,

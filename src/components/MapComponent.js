@@ -112,9 +112,9 @@ const MapComponent = ({ onLocationSelect }) => {
 
   return (
     <div>
-      <div id="map" style={{ height: '500px', width: '100%' }} />
-      <p>Click on the map to add markers</p>
-      {coordinates && <p>{coordinates}</p>} {/* Display coordinates if available */}
+      <div id="map" style={{ height: '500px', width: '300%' }} />
+      
+       Reported Incidents
     </div>
   );
 };

@@ -6,7 +6,7 @@
   width: 100%;
   margin: 0 auto;
   padding: 20px;
-  background-color: #81b1fa;
+  background-color:  #1457C3;
   overflow-x: hidden;
 }
 
@@ -96,4 +96,8 @@ form button {
 
 .toastify-toast .toastify-close-button {
   color: #fff;
+}
+.error-message{
+  color: red;
+  
 }

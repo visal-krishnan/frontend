@@ -21,6 +21,7 @@
     height: 200px;
     width:200px;
     margin: 10px;
+
 }
 .image2{
     height:300px;
@@ -36,7 +37,7 @@
     padding: 30px;
     width: 300px;
     padding-right: 40px;
-    height: 350px; /* Adjust width as needed */
+    height:auto; /* Adjust width as needed */
 }
 
 h2 {
